@@ -1,0 +1,9 @@
+{
+  "name": "aryansh-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/lib.test.mjs",
+    "serve": "python -m http.server 8777 --bind 127.0.0.1"
+  }
+}

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aryansh Sinha</title>
+  <meta name="description" content="Aryansh Sinha, AI engineer and computer science student at VIT Vellore. Agentic systems, explainable models and LLM tooling.">
+  <meta name="theme-color" content="#0e1d13">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aryansh Sinha">
+  <meta property="og:description" content="AI engineer and CS student at VIT. Agentic systems, explainable models and the pipelines that keep them honest.">
+  <meta property="og:image" content="assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" as="image" href="assets/portrait.webp" fetchpriority="high">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/big-shoulders-display@5.3.0/index.css" integrity="sha384-IuhvvyZbm1NgB7VMtIPPdoMeKUxntuEZuZGRD7dUbkAHb6lXpyYolkFZcY1iew1j" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/schibsted-grotesk@5.3.0/index.css" integrity="sha384-+QBjh8Rf2AeMZ97jKneMOAzYlmUZVgvG+wIQm9+YdOYQGlz5eP08S9+QYKyIYhDc" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.css" integrity="sha384-gvLq/iOMNnPchdosgVym5huSVkKipHCQaqSw2Eg0V52Mzmlf169ZOsXcNc2cNu8x" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/football.css">
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') d.dataset.theme = t;
+      } catch (e) {}
+      d.classList.add('js');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+    })();
+  </script>
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 256 256"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+    <symbol id="i-up" viewBox="0 0 256 256"><path d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.36A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.36Z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 256 256"><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-ball" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm76.52,147.42H170.9l-9.26-12.76,12.63-36.78,15-4.89,26.24,20.13A87.38,87.38,0,0,1,204.52,171.42Zm-164-34.3L66.71,117l15,4.89,12.63,36.78L85.1,171.42H51.48A87.38,87.38,0,0,1,40.47,137.12Zm10-50.64,5.51,18.6L40.71,116.77A87.33,87.33,0,0,1,50.43,86.48ZM109,152,97.54,118.65,128,97.71l30.46,20.94L147,152Zm91.07-46.92,5.51-18.6a87.33,87.33,0,0,1,9.72,30.29Zm-6.2-35.38-9.51,32.08-15.07,4.89L136,83.79V68.21l29.09-20A88.58,88.58,0,0,1,193.86,69.7ZM146.07,41.87,128,54.29,109.93,41.87a88.24,88.24,0,0,1,36.14,0ZM90.91,48.21l29.09,20V83.79L86.72,106.67l-15.07-4.89L62.14,69.7A88.58,88.58,0,0,1,90.91,48.21ZM63.15,187.42H83.52l7.17,20.27A88.4,88.4,0,0,1,63.15,187.42ZM110,214.13,98.12,180.71,107.35,168h41.3l9.23,12.71-11.83,33.42a88,88,0,0,1-36.1,0Zm55.36-6.44,7.17-20.27h20.37A88.4,88.4,0,0,1,165.31,207.69Z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#about">Skip to content</a>
+
+  <div class="loader" aria-hidden="true">
+    <p class="loader-name">aryansh sinha</p>
+    <p class="loader-count"><span class="loader-num">0</span></p>
+  </div>
+
+  <header class="nav on-hero">
+    <a class="nav-logo" href="#top" aria-label="Aryansh Sinha, back to top">aryansh sinha</a>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="i-sun"><use href="#i-sun"/></svg>
+        <svg class="i-moon"><use href="#i-moon"/></svg>
+      </button>
+      <button class="pill menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="roll"><span>Menu</span><span>Close</span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" inert>
+    <img class="menu-photo" src="assets/portrait.webp" alt="" loading="lazy">
+    <nav class="menu-nav" aria-label="Sections">
+      <ul class="menu-links">
+        <li><a href="#work" data-scroll><span class="roll"><span>Work</span><span aria-hidden="true">Work</span></span></a></li>
+        <li><a href="#experience" data-scroll><span class="roll"><span>Experience</span><span aria-hidden="true">Experience</span></span></a></li>
+        <li><a href="#about" data-scroll><span class="roll"><span>About</span><span aria-hidden="true">About</span></span></a></li>
+        <li><a href="#contact" data-scroll><span class="roll"><span>Contact</span><span aria-hidden="true">Contact</span></span></a></li>
+      </ul>
+    </nav>
+    <div class="menu-foot">
+      <a class="menu-mail" data-social="email" href="mailto:sinhaaryansh2006@gmail.com">sinhaaryansh2006@gmail.com</a>
+      <ul class="menu-social">
+        <li><a data-social="github" href="https://github.com/wyattstanson" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a data-social="linkedin" href="https://www.linkedin.com/in/aryansh-sinha" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a data-social="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="hero-media">
+        <img class="hero-fallback" src="assets/portrait.webp" alt="Aryansh Sinha in a black suit, standing outdoors" width="1592" height="1600" fetchpriority="high">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-shade" aria-hidden="true"></div>
+      </div>
+
+
+      <h1 class="hero-name">
+        <span class="sr-only">Aryansh Sinha</span>
+        <span class="hero-line l1" aria-hidden="true">aryansh</span>
+        <span class="hero-line l2" aria-hidden="true">sinha</span>
+        <span class="kickoff" aria-hidden="true">
+          <span class="kickoff-line"></span>
+          <span class="kickoff-circle"></span>
+          <span class="kickoff-spot" data-player data-anchor="spot"></span>
+        </span>
+      </h1>
+
+      <div class="hero-foot">
+        <p class="hero-sub">AI engineer and CS student at VIT. I build agentic systems, explainable models and the pipelines that keep them honest.</p>
+        <div class="hero-connect">
+          <p class="hero-connect-label">Connect on</p>
+          <ul class="hero-social">
+            <li><a data-social="github" href="https://github.com/wyattstanson" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a data-social="linkedin" href="https://www.linkedin.com/in/aryansh-sinha" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a data-social="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a data-social="email" href="mailto:sinhaaryansh2006@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-label="About">
+      <span class="nav-sentinel" aria-hidden="true"></span>
+      <div class="about-inner">
+        <span class="player about-player" data-player aria-hidden="true">4</span>
+        <p class="manifesto">I'm Aryansh, a computer science student at VIT Vellore who builds AI that has to work outside the notebook. Agents that plan and hand off. Models that explain every decision. Pipelines that point at the exact step that broke.</p>
+        <dl class="facts">
+          <div><dt>Studying</dt><dd>B.Tech in Computer Science<br>VIT Vellore, 2024-2028</dd></div>
+          <div><dt>Most recently</dt><dd>AI Intern at Tredence<br>Personalization for a live BFSI platform</dd></div>
+          <div><dt>Off the keyboard</dt><dd>Football, and a playlist<br>that never ends</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <header class="work-head">
+        <div class="head-row">
+          <h2 class="h-section" id="work-title">Starting XI <sup class="count">11</sup></h2>
+          <span class="player" data-player aria-hidden="true">6</span>
+        </div>
+        <p class="work-hint"><span class="hint-hover">Hover a project for a walkthrough of how it works. Click to open it.</span><span class="hint-touch">Tap a project for a walkthrough of how it works.</span></p>
+      </header>
+      <div class="work-body">
+        <ol class="work-list" data-work-list></ol>
+        <div class="work-lane" aria-hidden="true">
+          <span class="player" data-player>8</span>
+          <span class="player" data-player>5</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="more" id="more" aria-labelledby="more-title">
+      <div class="more-track" data-more-track>
+        <div class="more-intro">
+          <span class="player" data-player aria-hidden="true">7</span>
+          <h2 class="h-section" id="more-title">Live right now</h2>
+          <p class="more-lede">Deployed projects you can open in your browser.</p>
+          <a class="text-link" href="https://github.com/wyattstanson?tab=repositories" target="_blank" rel="noopener">All repositories <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bench" id="bench" aria-labelledby="bench-title">
+      <div class="head-row">
+        <h2 class="h-section" id="bench-title">On the bench</h2>
+        <span class="player" data-player aria-hidden="true">12</span>
+      </div>
+      <div class="bench-grid" data-bench></div>
+    </section>
+
+    <section class="exp" id="experience" aria-labelledby="exp-title">
+      <h2 class="h-section exp-title" id="exp-title">Experience</h2>
+      <div class="exp-stack">
+        <article class="exp-card" style="--i:0">
+          <p class="exp-top"><span class="player exp-player" data-player aria-hidden="true">3</span><span>Jun - Aug 2026</span><span>Remote</span></p>
+          <h3 class="exp-co">Tredence</h3>
+          <p class="exp-role">AI Intern</p>
+          <ul class="exp-points">
+            <li>Built personalization features for ARIA, a live BFSI platform, serving ML-driven recommendations across US payments and banking accounts.</li>
+            <li>Engineered agentic AI deployment workflows that put models into production and made inference more reliable.</li>
+            <li>Integrated SHAP so every prediction is explainable and audit-ready for regulated finance.</li>
+          </ul>
+        </article>
+        <article class="exp-card" style="--i:1">
+          <p class="exp-top"><span class="player exp-player" data-player aria-hidden="true">2</span><span>Apr - May 2026</span><span>Remote</span></p>
+          <h3 class="exp-co">Bluestock</h3>
+          <p class="exp-role">Data Analyst Intern</p>
+          <ul class="exp-points">
+            <li>Built a Nifty100 financial-intelligence platform with PostgreSQL, Python ETL, Django REST and Power BI for equity analytics.</li>
+            <li>Designed a star-schema warehouse and ML health-scoring models for automated fundamental analysis.</li>
+          </ul>
+        </article>
+        <article class="exp-card" style="--i:2">
+          <p class="exp-top"><span class="player exp-player" data-player aria-hidden="true">14</span><span>May - Aug 2025</span><span>Remote</span></p>
+          <h3 class="exp-co">Kalkini</h3>
+          <p class="exp-role">Marketing, Research and ML Intern at LetsGetMentor</p>
+          <ul class="exp-points">
+            <li>Contributed to ML security research.</li>
+            <li>Worked on platform development for Boardly.in.</li>
+            <li>Led the social media strategy.</li>
+          </ul>
+        </article>
+        <article class="exp-card" style="--i:3">
+          <p class="exp-top"><span class="player exp-player" data-player aria-hidden="true">16</span><span>2025 - 2027</span><span>VIT Vellore</span></p>
+          <h3 class="exp-co">Bulls and Bears</h3>
+          <p class="exp-role">Board Member and Outreach Head, Finance Club</p>
+          <ul class="exp-points">
+            <li>Organized finance simulation events, including Protocol X-Change and Cashflow.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="stack" aria-labelledby="stack-title">
+      <div class="stack-head">
+        <h2 class="stack-title" id="stack-title">What I work with</h2>
+        <span class="player" data-player aria-hidden="true">11</span>
+      </div>
+      <div class="marquee" data-marquee="1">
+        <div class="marquee-track">
+          <span>Python</span><span>PyTorch</span><span>LangGraph</span><span>Transformers</span><span>scikit-learn</span><span>SHAP</span><span>FastAPI</span><span>Django REST</span>
+        </div>
+      </div>
+      <div class="marquee marquee--outline" data-marquee="-1">
+        <div class="marquee-track">
+          <span>C++</span><span>Java</span><span>SQL</span><span>PostgreSQL</span><span>JavaScript</span><span>Power BI</span><span>Streamlit</span><span>GitHub Actions</span><span>Docker</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg" id="background" aria-labelledby="bg-title">
+      <div class="head-row">
+        <h2 class="h-section" id="bg-title">Education and recognition</h2>
+        <span class="player" data-player aria-hidden="true">15</span>
+      </div>
+      <div class="bento">
+        <article class="cell cell-vit">
+          <p class="cell-meta">2024-2028</p>
+          <div>
+            <h3 class="cell-big">VIT Vellore</h3>
+            <p class="cell-text">B.Tech in Computer Science, Vellore Institute of Technology</p>
+          </div>
+        </article>
+        <article class="cell cell-ieee">
+          <p class="cell-meta">IEEE PCS PlaceIt Ideathon</p>
+          <h3 class="cell-big">Winner</h3>
+        </article>
+        <article class="cell cell-acm">
+          <p class="cell-meta">ACM Reverse Coding</p>
+          <h3 class="cell-big">Finalist</h3>
+        </article>
+        <article class="cell cell-cs50">
+          <span class="player cell-player" data-player aria-hidden="true">9</span>
+          <p class="cell-meta">Harvard, via edX</p>
+          <h3 class="cell-big">CS50 Python</h3>
+        </article>
+        <article class="cell cell-dps">
+          <h3 class="cell-mid">Delhi Public School, Faridabad</h3>
+          <p class="cell-text">Higher Secondary, Physics, Chemistry and Mathematics</p>
+          <p class="cell-meta">2012-2024</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 class="contact-title" id="contact-title">Got something worth building? Let's talk.</h2>
+    <div class="contact-mail">
+      <a class="mail-link" data-social="email" href="mailto:sinhaaryansh2006@gmail.com">sinhaaryansh2006@gmail.com</a>
+      <button class="pill copy-btn" type="button" data-copy="sinhaaryansh2006@gmail.com">
+        <svg class="i-copy"><use href="#i-copy"/></svg><svg class="i-check"><use href="#i-check"/></svg>
+        <span class="copy-label">Copy</span>
+      </button>
+      <span class="sr-only" role="status" data-copy-status></span>
+      <div class="goal" data-player data-anchor="goal" aria-hidden="true"><span class="goal-net"></span></div>
+    </div>
+    <ul class="contact-social">
+      <li><a data-social="github" href="https://github.com/wyattstanson" target="_blank" rel="noopener"><svg><use href="#i-github"/></svg><span>GitHub</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
+      <li><a data-social="linkedin" href="https://www.linkedin.com/in/aryansh-sinha" target="_blank" rel="noopener"><svg><use href="#i-linkedin"/></svg><span>LinkedIn</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
+      <li><a data-social="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener"><svg><use href="#i-instagram"/></svg><span>Instagram</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
+      <li><a data-social="email" href="mailto:sinhaaryansh2006@gmail.com"><svg><use href="#i-mail"/></svg><span>Email</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
+    </ul>
+    <p class="contact-giant" aria-hidden="true">aryansh sinha</p>
+    <div class="contact-base">
+      <span>&copy; 2026 Aryansh Sinha</span>
+      <button class="to-top" type="button">Back to top <svg><use href="#i-up"/></svg></button>
+    </div>
+  </footer>
+
+  <div class="guide" aria-hidden="true">
+    <div class="guide-inner">
+      <figure class="guide-shot"><img alt=""></figure>
+      <div class="guide-head">
+        <p class="guide-kind"></p>
+        <p class="guide-name"></p>
+      </div>
+      <p class="guide-what"></p>
+      <p class="guide-label">How it works</p>
+      <ol class="guide-steps"></ol>
+      <p class="guide-metric"></p>
+      <ul class="guide-stack"></ul>
+      <p class="guide-cta"></p>
+    </div>
+  </div>
+
+  <div class="pitch-fx" aria-hidden="true">
+    <svg class="pass-line"><path d="" pathLength="1"/></svg>
+    <div class="ball-shadow"></div>
+    <div class="ball"><svg><use href="#i-ball"/></svg></div>
+  </div>
+
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor-ring"><span class="cursor-label"></span></div>
+    <div class="cursor-ball"><svg><use href="#i-ball"/></svg></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" integrity="sha384-XmJ9SoHtVOHoQUcKvFAzVXwdkKo1Ie3bhmSoIAkcdsHGaIrVJIkmozyq0FJeb/Ly" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js" integrity="sha384-wl5TeDVvOWt30Pbf8aSo2ZrzsOjddu3avOBvHe+p+OhJt9gP6w9YXmDkN5DK2/dF" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js" integrity="sha384-SWJ0lLVRoipvHh59xj0pL7uC7Ih51F+5smaFtrG+2nr+TlDZU5SYJHmxfolbeNTr" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js" integrity="sha384-jqpi9VmOdhyLoLURgjCn7EpnG9BbnHW57ibIZoeaIU+erWDH3k8fQQg0xH2ySjnw" crossorigin="anonymous"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
