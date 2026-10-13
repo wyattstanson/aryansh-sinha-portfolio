@@ -140,7 +140,7 @@ function initTheme() {
   const sync = () => {
     const light = root.dataset.theme === 'light';
     btn.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
-    meta.setAttribute('content', light ? '#e3ebdd' : '#0e1d13');
+    meta.setAttribute('content', light ? '#efefed' : '#0a0a0a');
   };
   sync();
   btn.addEventListener('click', () => {

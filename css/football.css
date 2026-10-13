@@ -1,8 +1,9 @@
 /*
   Football theme, layered over styles.css.
-  A green pitch: mowed stripes, chalk markings, numbered players and a ball
-  passed between them as you scroll (driven by js/football.js). Dark is a night
-  match, light is a day match; both greens stay muted so nothing reads as neon.
+  The page is the pitch, drawn in chalk on black: touchlines down both edges,
+  the centre circle under the name, mowed stripes, and a penalty box around the
+  contact section with the goal on the goal line. Numbered players pass a ball
+  down the page as you scroll (driven by js/football.js).
   Type: Big Shoulders Display (stadium signage, shirt numbers) for display,
   Schibsted Grotesk (a newspaper face) for reading.
 */
@@ -13,46 +14,16 @@
   --font-mono: var(--font-display);
   --font-name: var(--font-display);
 
-  --bg: #0f2216;
-  --bg-2: #0c1c12;
-  --surface: #13291b;
-  --surface-2: #17301f;
-  --fg: #eef3ec;
-  --fg-2: #bccabd;
-  --muted: #8fa492;
-  --line: rgb(238 243 236 / 0.12);
-  --line-strong: rgb(238 243 236 / 0.24);
-  --inv-bg: #eef3ec;
-  --inv-fg: #0f2216;
-  --inv-muted: #4d6352;
-  --inv-line: rgb(15 34 22 / 0.14);
-  --shadow: 0 30px 80px rgb(2 10 5 / 0.55);
-
-  --chalk: rgb(238 243 236 / 0.6);
-  --chalk-strong: rgb(238 243 236 / 0.85);
-  --net: rgb(238 243 236 / 0.25);
-  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(255 255 255 / 0.04) 12.5vw 25vw);
+  --chalk: rgb(237 237 235 / 0.5);
+  --chalk-strong: rgb(237 237 235 / 0.82);
+  --net: rgb(237 237 235 / 0.22);
+  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(255 255 255 / 0.026) 12.5vw 25vw);
 }
 :root[data-theme="light"] {
-  --bg: #dfe9d8;
-  --bg-2: #d6e2ce;
-  --surface: #d3dfcb;
-  --surface-2: #c8d6bf;
-  --fg: #0f2216;
-  --fg-2: #2c4433;
-  --muted: #4c6452;
-  --line: rgb(15 34 22 / 0.14);
-  --line-strong: rgb(15 34 22 / 0.28);
-  --inv-bg: #0f2216;
-  --inv-fg: #eef3ec;
-  --inv-muted: #9fb3a3;
-  --inv-line: rgb(238 243 236 / 0.16);
-  --shadow: 0 30px 80px rgb(15 34 22 / 0.25);
-
-  --chalk: rgb(15 34 22 / 0.5);
-  --chalk-strong: rgb(15 34 22 / 0.75);
-  --net: rgb(15 34 22 / 0.2);
-  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(255 255 255 / 0.28) 12.5vw 25vw);
+  --chalk: rgb(14 14 14 / 0.42);
+  --chalk-strong: rgb(14 14 14 / 0.7);
+  --net: rgb(14 14 14 / 0.18);
+  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(0 0 0 / 0.03) 12.5vw 25vw);
 }
 
 .about, .work, .more, .bench, .exp, .stack, .bg, .contact { background: var(--pitch), var(--bg); }
@@ -219,7 +190,6 @@ html.motion:not(.revealed) .kickoff { opacity: 0; }
   width: clamp(150px, 15vw, 220px); aspect-ratio: 7 / 3;
   border: 2px solid var(--chalk-strong); border-bottom: 0;
 }
-.goal::after { content: ""; position: absolute; left: -35%; right: -35%; bottom: 0; height: 2px; background: var(--chalk); }
 .goal-net {
   position: absolute; inset: 6px 6px 0;
   background:
@@ -290,6 +260,65 @@ html.has-cursor, html.has-cursor * { cursor: none !important; }
   .work-meta { grid-column: 1 / -1; }
   .work-arrow { grid-column: 3; }
   .about-player { top: -7vh; }
-  .goal { margin-left: 0; }
   .work-line { text-align: left; }
+}
+
+/* touchlines: two chalk lines framing the whole page */
+.pitch-lines { position: fixed; inset: 0; z-index: 54; pointer-events: none; }
+.pitch-lines::before, .pitch-lines::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 1.5px;
+  background: var(--chalk); opacity: 0.6;
+}
+.pitch-lines::before { left: calc(var(--gutter) * 0.45); }
+.pitch-lines::after { right: calc(var(--gutter) * 0.45); }
+
+/* the attacking end: penalty box, D, six-yard box, goal and goal line */
+.box-area {
+  position: relative;
+  padding: 8vh clamp(20px, 4vw, 64px) calc(clamp(64px, 6.4vw, 94px) + 9vh);
+  margin-top: 6vh;
+}
+.box-area::before {
+  content: ""; position: absolute; inset: 0;
+  border: 1.5px solid var(--chalk); border-bottom: 0;
+  pointer-events: none;
+}
+.box-arc {
+  position: absolute; left: 50%; top: 0;
+  width: clamp(180px, 22vw, 320px); aspect-ratio: 2.4 / 1;
+  border: 1.5px solid var(--chalk); border-radius: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: inset(0 0 50% 0);
+  pointer-events: none;
+}
+.six-yard {
+  position: absolute; left: 50%; bottom: 0;
+  width: clamp(240px, 34%, 520px); height: calc(clamp(64px, 6.4vw, 94px) + 5vh);
+  border: 1.5px solid var(--chalk); border-bottom: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.box-area .goal {
+  position: absolute; left: 50%; bottom: 0; margin: 0;
+  transform: translateX(-50%);
+}
+.goal-line {
+  position: absolute; bottom: 0; height: 1.5px;
+  left: calc(-1 * var(--gutter) * 0.55); right: calc(-1 * var(--gutter) * 0.55);
+  background: var(--chalk-strong);
+  pointer-events: none;
+}
+.goal-line::before, .goal-line::after {
+  content: ""; position: absolute; bottom: 0; width: 30px; height: 30px;
+  border: 1.5px solid var(--chalk); border-radius: 50%;
+  clip-path: inset(0 0 50% 0);
+  transform: translateY(50%);
+}
+.goal-line::before { left: -15px; clip-path: inset(0 0 50% 50%); }
+.goal-line::after { right: -15px; clip-path: inset(0 50% 50% 0); }
+.box-area .contact-mail { margin-top: 5vh; }
+
+@media (max-width: 767px) {
+  .box-area { padding: 7vh 16px calc(64px + 8vh); }
+  .six-yard { width: 62%; }
 }
