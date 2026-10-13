@@ -1,6 +1,7 @@
 /*
   Football theme, layered over styles.css.
-  Palette: olive pitch for dark mode, celadon pitch for light mode.
+  Palette: Barcelona for dark mode (blaugrana navy, garnet stripes and ball
+  carrier), Manchester City for light mode (white, sky blue, City navy).
   The page is the pitch, drawn in chalk: touchlines down both edges,
   the centre circle under the name, mowed stripes, and a penalty box around the
   contact section with the goal on the goal line. Numbered players pass a ball
@@ -15,48 +16,52 @@
   --font-mono: var(--font-display);
   --font-name: var(--font-display);
 
-  /* olive night pitch */
-  --bg: #35391c;
-  --bg-2: #2f3218;
-  --surface: #3e4322;
-  --surface-2: #474d27;
-  --fg: #f1f1e6;
-  --fg-2: #d0d1bd;
-  --muted: #bcbea3;
-  --line: rgb(241 241 230 / 0.14);
-  --line-strong: rgb(241 241 230 / 0.26);
-  --inv-bg: #f1f1e6;
-  --inv-fg: #2a2d16;
-  --inv-muted: #5b5e45;
-  --inv-line: rgb(42 45 22 / 0.15);
-  --shadow: 0 30px 80px rgb(18 19 8 / 0.5);
+  /* Barcelona night: blaugrana navy, garnet in the stripes and on the ball */
+  --bg: #0d1530;
+  --bg-2: #0a1128;
+  --surface: #141e3f;
+  --surface-2: #1b2650;
+  --fg: #f2f2f6;
+  --fg-2: #c6c9dc;
+  --muted: #a3a9c8;
+  --line: rgb(242 242 246 / 0.12);
+  --line-strong: rgb(242 242 246 / 0.24);
+  --inv-bg: #f2f2f6;
+  --inv-fg: #0d1530;
+  --inv-muted: #4a5072;
+  --inv-line: rgb(13 21 48 / 0.14);
+  --shadow: 0 30px 80px rgb(4 7 20 / 0.55);
+  --accent: #a50044;
+  --accent-fg: #ffffff;
 
-  --chalk: rgb(241 241 230 / 0.55);
-  --chalk-strong: rgb(241 241 230 / 0.85);
-  --net: rgb(241 241 230 / 0.25);
-  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(255 255 255 / 0.035) 12.5vw 25vw);
+  --chalk: rgb(242 242 246 / 0.55);
+  --chalk-strong: rgb(242 242 246 / 0.85);
+  --net: rgb(242 242 246 / 0.22);
+  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(165 0 68 / 0.11) 12.5vw 25vw);
 }
 :root[data-theme="light"] {
-  /* celadon day pitch */
-  --bg: #ace1af;
-  --bg-2: #a2d8a5;
-  --surface: #c0e9c2;
-  --surface-2: #9dd3a0;
-  --fg: #13261a;
-  --fg-2: #2b4231;
-  --muted: #344d3a;
-  --line: rgb(19 38 26 / 0.16);
-  --line-strong: rgb(19 38 26 / 0.3);
-  --inv-bg: #13261a;
-  --inv-fg: #e9f6e9;
-  --inv-muted: #9cb8a0;
-  --inv-line: rgb(233 246 233 / 0.16);
-  --shadow: 0 30px 80px rgb(19 38 26 / 0.22);
+  /* Manchester City day: white and sky blue, City navy for text */
+  --bg: #f7fbfe;
+  --bg-2: #eaf4fb;
+  --surface: #e6f1fa;
+  --surface-2: #d3e7f7;
+  --fg: #1c2c5b;
+  --fg-2: #34467a;
+  --muted: #4b5d88;
+  --line: rgb(28 44 91 / 0.14);
+  --line-strong: rgb(28 44 91 / 0.28);
+  --inv-bg: #1c2c5b;
+  --inv-fg: #f7fbfe;
+  --inv-muted: #a9c4e6;
+  --inv-line: rgb(247 251 254 / 0.16);
+  --shadow: 0 30px 80px rgb(28 44 91 / 0.18);
+  --accent: #6cabdd;
+  --accent-fg: #1c2c5b;
 
-  --chalk: rgb(19 38 26 / 0.45);
-  --chalk-strong: rgb(19 38 26 / 0.72);
-  --net: rgb(19 38 26 / 0.2);
-  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(255 255 255 / 0.16) 12.5vw 25vw);
+  --chalk: rgb(108 171 221 / 0.9);
+  --chalk-strong: rgb(28 44 91 / 0.72);
+  --net: rgb(28 44 91 / 0.2);
+  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(108 171 221 / 0.13) 12.5vw 25vw);
 }
 
 .about, .work, .more, .bench, .exp, .stack, .bg, .contact { background: var(--pitch), var(--bg); }
@@ -183,7 +188,7 @@ html.motion:not(.revealed) .kickoff { opacity: 0; }
   content: ""; position: absolute; inset: -8px; border-radius: 50%;
   border: 1px solid var(--chalk-strong); opacity: 0; transform: scale(0.7);
 }
-.player.has-ball { background: var(--fg); color: var(--bg); }
+.player.has-ball { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
 .player.has-ball::after { animation: receive 0.9s var(--ease-out); }
 @keyframes receive { from { opacity: 0.9; transform: scale(0.7); } to { opacity: 0; transform: scale(1.7); } }
 
@@ -206,7 +211,7 @@ html.motion:not(.revealed) .kickoff { opacity: 0; }
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   transition: opacity 0.4s;
 }
-.cone.has-ball { opacity: 1; }
+.cone.has-ball { opacity: 1; background: var(--accent); }
 .exp-top { justify-content: flex-start; align-items: center; gap: 14px; }
 .exp-top > span:last-child { margin-left: auto; }
 .exp-player { font-size: 17px; letter-spacing: 0; }
@@ -238,7 +243,7 @@ html.motion:not(.revealed) .kickoff { opacity: 0; }
 html.animated.revealed .pitch-fx { opacity: 1; }
 .pass-line { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; opacity: 0; transition: opacity 0.3s; }
 .is-passing .pass-line { opacity: 1; }
-.pass-line path { fill: none; stroke: var(--chalk); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 0 1; }
+.pass-line path { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 0 1; }
 .ball {
   position: absolute; left: 0; top: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px;
   border-radius: 50%; color: #141414;
@@ -355,3 +360,5 @@ html.has-cursor, html.has-cursor * { cursor: none !important; }
   .box-area { padding: 7vh 16px calc(64px + 8vh); }
   .six-yard { width: 62%; }
 }
+
+::selection { background: var(--accent); color: var(--accent-fg); }
