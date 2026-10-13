@@ -1,9 +1,8 @@
 // Every link on the page that points at a profile comes from here.
-// TODO(aryansh): replace the Instagram URL with your profile link.
 export const SOCIALS = {
   github: 'https://github.com/wyattstanson',
   linkedin: 'https://www.linkedin.com/in/aryansh-sinha',
-  instagram: 'https://www.instagram.com/',
+  instagram: 'https://www.instagram.com/wyattstanson/',
   email: 'mailto:sinhaaryansh2006@gmail.com',
 };
 
