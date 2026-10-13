@@ -1,6 +1,7 @@
 /*
   Football theme, layered over styles.css.
-  The page is the pitch, drawn in chalk on black: touchlines down both edges,
+  Palette: olive pitch for dark mode, celadon pitch for light mode.
+  The page is the pitch, drawn in chalk: touchlines down both edges,
   the centre circle under the name, mowed stripes, and a penalty box around the
   contact section with the goal on the goal line. Numbered players pass a ball
   down the page as you scroll (driven by js/football.js).
@@ -14,16 +15,48 @@
   --font-mono: var(--font-display);
   --font-name: var(--font-display);
 
-  --chalk: rgb(237 237 235 / 0.5);
-  --chalk-strong: rgb(237 237 235 / 0.82);
-  --net: rgb(237 237 235 / 0.22);
-  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(255 255 255 / 0.026) 12.5vw 25vw);
+  /* olive night pitch */
+  --bg: #35391c;
+  --bg-2: #2f3218;
+  --surface: #3e4322;
+  --surface-2: #474d27;
+  --fg: #f1f1e6;
+  --fg-2: #d0d1bd;
+  --muted: #bcbea3;
+  --line: rgb(241 241 230 / 0.14);
+  --line-strong: rgb(241 241 230 / 0.26);
+  --inv-bg: #f1f1e6;
+  --inv-fg: #2a2d16;
+  --inv-muted: #5b5e45;
+  --inv-line: rgb(42 45 22 / 0.15);
+  --shadow: 0 30px 80px rgb(18 19 8 / 0.5);
+
+  --chalk: rgb(241 241 230 / 0.55);
+  --chalk-strong: rgb(241 241 230 / 0.85);
+  --net: rgb(241 241 230 / 0.25);
+  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(255 255 255 / 0.035) 12.5vw 25vw);
 }
 :root[data-theme="light"] {
-  --chalk: rgb(14 14 14 / 0.42);
-  --chalk-strong: rgb(14 14 14 / 0.7);
-  --net: rgb(14 14 14 / 0.18);
-  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(0 0 0 / 0.03) 12.5vw 25vw);
+  /* celadon day pitch */
+  --bg: #ace1af;
+  --bg-2: #a2d8a5;
+  --surface: #c0e9c2;
+  --surface-2: #9dd3a0;
+  --fg: #13261a;
+  --fg-2: #2b4231;
+  --muted: #344d3a;
+  --line: rgb(19 38 26 / 0.16);
+  --line-strong: rgb(19 38 26 / 0.3);
+  --inv-bg: #13261a;
+  --inv-fg: #e9f6e9;
+  --inv-muted: #9cb8a0;
+  --inv-line: rgb(233 246 233 / 0.16);
+  --shadow: 0 30px 80px rgb(19 38 26 / 0.22);
+
+  --chalk: rgb(19 38 26 / 0.45);
+  --chalk-strong: rgb(19 38 26 / 0.72);
+  --net: rgb(19 38 26 / 0.2);
+  --pitch: repeating-linear-gradient(90deg, transparent 0 12.5vw, rgb(255 255 255 / 0.16) 12.5vw 25vw);
 }
 
 .about, .work, .more, .bench, .exp, .stack, .bg, .contact { background: var(--pitch), var(--bg); }
